@@ -1,0 +1,107 @@
+GET http://localhost:3001/api/persons
+
+###
+
+GET https://phonebook-nuance.herokuapp.com/api/persons
+
+###
+
+GET http://localhost:3001/info
+
+###
+
+GET https://phonebook-nuance.herokuapp.com/info
+
+###
+
+GET http://localhost:3001/api/persons/613d0856e935aae811afc7f5
+
+###
+
+GET https://phonebook-nuance.herokuapp.com/api/persons/1
+
+###
+
+GET http://localhost:3001/api/persons/4
+
+###
+
+GET https://phonebook-nuance.herokuapp.com/api/persons/5
+
+###
+
+
+DELETE http://localhost:3001/api/persons/613e2175cb52e99b6ef184ec
+
+###
+
+DELETE https://phonebook-nuance.herokuapp.com/api/persons/4
+
+###
+
+
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    "name": "binh",
+    "number": "07897897897890"
+}
+
+###
+
+POST https://phonebook-nuance.herokuapp.com/api/persons
+Content-Type: application/json
+
+{
+    "name": "Nuance",
+    "number": "0909696857"
+}
+
+###
+
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    "name": "Nuance"
+}
+
+###
+
+
+POST https://phonebook-nuance.herokuapp.com/api/persons
+Content-Type: application/json
+
+{
+    "name": "Nuance"
+}
+
+###
+
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    "number": "0909"
+}
+
+###
+
+
+POST https://phonebook-nuance.herokuapp.com/api/persons
+Content-Type: application/json
+
+{
+    "number": "0909"
+}
+
+###
+
+PUT http://localhost:3001/api/persons/613d0856e935aae811afc7f
+Content-Type: application/json
+
+{
+    "name": "wert",
+    "number": "12324234"
+}

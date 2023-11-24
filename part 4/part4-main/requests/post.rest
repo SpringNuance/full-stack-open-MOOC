@@ -1,0 +1,65 @@
+POST http://localhost:3003/api/blogs/
+Content-Type: application/json
+
+{
+    "title": "Hello",
+    "author": "Binh",
+    "url": "http",
+    "likes": 123,
+    "user_id": "123"
+
+}
+
+###
+
+POST http://localhost:3003/api/blogs/
+Content-Type: application/json
+
+{
+    "title": "Love you",
+    "author": "Nuance",
+    "url": "https",
+    "likes": 234
+}
+
+###
+POST http://localhost:3003/api/users/
+Content-Type: application/json
+
+{
+    "notes": [],
+    "username": "root",
+    "name": "Superuser",
+    "password": "salainen",
+
+}
+
+###
+POST http://localhost:3003/api/users/
+Content-Type: application/json
+
+{
+    "notes": [],
+    "username": "binh",
+    "name": "nuance",
+    "password": "posita"
+}
+
+###
+POST http://localhost:3003/api/login/
+Content-Type: application/json
+
+{
+    "username": "binh",
+    "password": "posita"
+}
+
+# Wrong password
+###
+POST http://localhost:3003/api/login/
+Content-Type: application/json
+
+{
+    "username": "binh",
+    "password": "posit"
+}

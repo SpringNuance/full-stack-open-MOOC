@@ -1,0 +1,35 @@
+Diagram depicting the situation where the user creates a new note on page 
+https://studies.cs.helsinki.fi/exampleapp/notes by writing something into 
+the text field and clicking the submit button.
+
+note over browser:
+browser sends new note to server
+The server adding the note to the database
+end note
+
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note
+
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+server-->browser: HTML-code
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+server-->browser: main.css
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+server-->browser: main.js
+
+note over browser:
+browser starts executing js-code
+that requests JSON data from server 
+The JSON file will contain the new note 
+created at the POST request
+end note
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+server-->browser: [{ content: "HTML is easy", date: "2019-05-23" }, ...]
+
+note over browser:
+browser executes the event handler
+that renders notes. The added note 
+earlier will be shown
+at the bottom of the list
+end note
